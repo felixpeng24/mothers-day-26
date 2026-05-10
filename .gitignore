@@ -1,0 +1,19 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+
+# Editor / OS
+.DS_Store
+.idea
+.vscode
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Claude
+.claude
+CLAUDE.md
