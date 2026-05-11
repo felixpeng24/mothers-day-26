@@ -44,16 +44,6 @@ function PlumBlossom({ className = '', size = 64 }) {
   );
 }
 
-function TigerSeal({ className = '' }) {
-  return (
-    <div
-      className={`relative inline-flex h-16 w-16 items-center justify-center rounded-full border-2 border-gold ${className}`}
-    >
-      <span className="font-zh text-3xl text-gold leading-none">虎</span>
-    </div>
-  );
-}
-
 function PhotoCard({ src, caption, index }) {
   const ref = useRef(null);
 
@@ -127,14 +117,11 @@ export default function App() {
       <div className="relative mx-auto max-w-5xl px-6 py-20 md:py-28">
         {/* Header */}
         <header className="text-center">
-          <div className="mb-6 flex justify-center">
-            <TigerSeal />
-          </div>
           <h1 className="font-zh text-5xl md:text-7xl font-semibold tracking-wide gold-text drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
             给妈妈
           </h1>
           <p className="mt-4 text-sm md:text-base text-ivory/70 font-serif italic">
-            From Felix, with love · 虎年快乐
+            From Felix, with love · 母亲节快乐
           </p>
           <div className="mx-auto mt-6 h-px w-24 ink-divider" aria-hidden="true" />
         </header>
