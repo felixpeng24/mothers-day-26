@@ -5,22 +5,57 @@
 @layer base {
   html {
     font-family: 'EB Garamond', Georgia, serif;
-    color: #1a1a1a;
-    background-color: #FAF8F5;
+    color: #F5E9C9;
+    background-color: #5C0510;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #5C0510;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(232, 199, 106, 0.10), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(232, 199, 106, 0.08), transparent 50%),
+      radial-gradient(circle at 50% 50%, #8B0A1A 0%, #5C0510 70%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 }
 
 @layer utilities {
   .photo-card {
     opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 700ms ease-out, transform 700ms ease-out;
+    transform: translateY(14px);
+    transition: opacity 800ms ease-out, transform 800ms ease-out;
     will-change: opacity, transform;
   }
   .photo-card.is-visible {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .gold-text {
+    color: #E8C76A;
+  }
+
+  .ink-divider {
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(232, 199, 106, 0.7),
+      transparent
+    );
+  }
+}
+
+/* Faint background hanzi pattern */
+.bg-hanzi {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><text x='50' y='180' font-family='serif' font-size='180' fill='%23E8C76A'>福</text><text x='350' y='380' font-family='serif' font-size='180' fill='%23E8C76A'>春</text><text x='100' y='560' font-family='serif' font-size='160' fill='%23E8C76A'>虎</text></svg>");
+  background-size: 480px 480px;
+  background-repeat: repeat;
+  mix-blend-mode: screen;
 }
